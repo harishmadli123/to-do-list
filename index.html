@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h3>Hamza Mament</h3>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li>Today Focus</li>
+          <li>Personal</li>
+          <li>Freelance</li>
+          <li>Work</li>
+          <li>Add to List</li>
+        </ul>
+      </nav>
+      <footer class="footer">
+        <a href="#">Scheduled Tasks</a>
+        <a href="#">Settings</a>
+      </footer>
+    </aside>
+    <main class="main-content">
+      <h2>Today Main Focus</h2>
+      <p>Design team meeting</p>
+      <div class="task-input">
+        <input type="text" id="task-input-box" placeholder="What is your next task?" readonly>
+      </div>
+      <ul class="tasks" id="task-list">
+        <li>Work out <span>8:00 AM</span></li>
+        <li>Design team meeting <span>2:30 PM</span></li>
+        <li>Hand off the project <span>7:00 PM</span></li>
+        <li>Read 5 pages of "Spider" <span>10:30 PM</span></li>
+      </ul>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="task-modal">
+    <div class="modal-content">
+      <span class="close" id="modal-close">&times;</span>
+      <h3>Add New Task</h3>
+      <form id="task-form">
+        <label for="task-name">Task Name:</label>
+        <input type="text" id="task-name" required>
+        
+        <label for="task-time">Time:</label>
+        <input type="time" id="task-time" required>
+
+        <label for="task-category">Category:</label>
+        <select id="task-category">
+          <option value="Personal">Personal</option>
+          <option value="Freelance">Freelance</option>
+          <option value="Work">Work</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
